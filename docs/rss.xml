@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 10:23:41 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>termux进阶教程</title><link>https://wang1145141481.github.io/wangblog016/post/termux-jin-jie-jiao-cheng.html</link><description>Termux进阶教程&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 10:35:26 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>部署python教程</title><link>https://wang1145141481.github.io/wangblog016/post/bu-shu-python-jiao-cheng.html</link><description>Python应用程序部署教程&#13;
+&#13;
+&#13;
+引言&#13;
+&#13;
+Python作为一种广泛使用的编程语言，以其简洁的语法和强大的库支持，在Web开发、数据分析、人工智能等多个领域发挥着重要作用。</description><guid isPermaLink="true">https://wang1145141481.github.io/wangblog016/post/bu-shu-python-jiao-cheng.html</guid><pubDate>Thu, 09 Jan 2025 10:34:53 +0000</pubDate></item><item><title>termux进阶教程</title><link>https://wang1145141481.github.io/wangblog016/post/termux-jin-jie-jiao-cheng.html</link><description>Termux进阶教程&#13;
 &#13;
 &#13;
 引言&#13;
