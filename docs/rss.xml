@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 10:35:26 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>部署python教程</title><link>https://wang1145141481.github.io/wangblog016/post/bu-shu-python-jiao-cheng.html</link><description>Python应用程序部署教程&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 12:05:12 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>HTTPS与HTTP的区别</title><link>https://wang1145141481.github.io/wangblog016/post/HTTPS-yu-HTTP-de-qu-bie.html</link><description>HTTPS与HTTP的区别&#13;
+&#13;
+&#13;
+引言&#13;
+&#13;
+在互联网时代，数据传输的安全性变得尤为重要。</description><guid isPermaLink="true">https://wang1145141481.github.io/wangblog016/post/HTTPS-yu-HTTP-de-qu-bie.html</guid><pubDate>Thu, 09 Jan 2025 12:04:47 +0000</pubDate></item><item><title>部署python教程</title><link>https://wang1145141481.github.io/wangblog016/post/bu-shu-python-jiao-cheng.html</link><description>Python应用程序部署教程&#13;
 &#13;
 &#13;
 引言&#13;

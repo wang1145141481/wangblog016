@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="HTTPS与HTTP的区别
+
+
+引言
+
+在互联网时代，数据传输的安全性变得尤为重要。">
+<meta property="og:title" content="HTTPS与HTTP的区别">
+<meta property="og:description" content="HTTPS与HTTP的区别
+
+
+引言
+
+在互联网时代，数据传输的安全性变得尤为重要。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wang1145141481.github.io/wangblog016/post/HTTPS-yu-HTTP-de-qu-bie.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>HTTPS与HTTP的区别</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">HTTPS与HTTP的区别</h1>
+<div class="title-right">
+    <a href="https://wang1145141481.github.io/wangblog016" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/wang1145141481/wangblog016/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>HTTPS与HTTP的区别</p>
+<p>引言</p>
+<p>在互联网时代，数据传输的安全性变得尤为重要。HTTP（超文本传输协议）和HTTPS（安全超文本传输协议）是两种常见的网络传输协议，它们在数据传输过程中扮演着关键角色。本文将详细探讨HTTPS与HTTP的区别，从技术原理、安全性、应用场景等方面进行深入分析，以期为读者提供全面的认识。</p>
+<p>HTTP简介</p>
+<p>HTTP是一种应用层的协议，它定义了客户端和服务器之间请求和响应的格式。HTTP协议采用明文传输数据，即数据在传输过程中不进行加密处理，这使得HTTP协议在传输过程中容易受到中间人攻击、数据泄露等安全问题。HTTP协议的传输过程如下：</p>
+<p>• 客户端通过浏览器或其他客户端软件向服务器发送HTTP请求，请求中包含请求方法（如GET、POST）、请求URI、HTTP版本以及请求头等信息。</p>
+<p>• 服务器接收到HTTP请求后，根据请求内容进行处理，然后生成HTTP响应，响应中包含状态码、响应头以及响应体（即请求的数据）。</p>
+<p>• 服务器将HTTP响应发送给客户端，客户端接收到响应后，根据状态码和响应头等信息对数据进行解析和展示。</p>
+<p>HTTPS简介</p>
+<p>HTTPS是在HTTP的基础上，通过引入SSL/TLS（安全套接字层/传输层安全性）协议来实现数据加密传输的协议。HTTPS协议的传输过程如下：</p>
+<p>• 客户端向服务器发送HTTPS请求，请求中包含客户端支持的SSL/TLS版本、加密套件等信息。</p>
+<p>• 服务器接收到请求后，选择一个双方都支持的加密套件，并向客户端发送服务器的数字证书。数字证书中包含服务器的公钥、证书颁发机构（CA）的签名等信息。</p>
+<p>• 客户端验证服务器的数字证书的有效性，如果证书有效，则使用服务器的公钥加密一个随机生成的对称密钥，并将加密后的对称密钥发送给服务器。</p>
+<p>• 服务器使用自己的私钥解密对称密钥，然后使用该对称密钥对数据进行加密。</p>
+<p>• 服务器将加密后的数据发送给客户端，客户端使用对称密钥对数据进行解密，获取原始数据。</p>
+<p>HTTPS与HTTP的区别</p>
+<p>安全性</p>
+<p>安全性是HTTPS与HTTP最显著的区别之一。HTTP协议采用明文传输数据，数据在传输过程中容易被窃听、篡改或伪造，从而导致敏感信息泄露、数据完整性受损等问题。例如，当用户在HTTP网站上输入用户名和密码时，这些信息在传输过程中可能会被黑客截获，导致用户账户被盗用。</p>
+<p>而HTTPS协议通过SSL/TLS协议对数据进行加密传输，确保数据在传输过程中的机密性、完整性和不可否认性。即使数据在传输过程中被截获，黑客也无法解密获取原始数据，从而有效保护用户的隐私和数据安全。此外，HTTPS还可以防止中间人攻击，因为客户端在与服务器建立连接时会验证服务器的数字证书，只有证书验证通过后才会进行数据传输，从而确保数据传输的可靠性。</p>
+<p>性能</p>
+<p>从性能角度来看，HTTPS相较于HTTP会带来一定的性能开销。首先，HTTPS在建立连接时需要进行SSL/TLS握手过程，这个过程包括证书验证、密钥交换等步骤，相较于HTTP的简单连接建立过程，会增加一定的连接延迟。其次，数据加密和解密操作需要消耗一定的计算资源，尤其是在数据量较大或服务器负载较高的情况下，可能会对服务器的性能产生一定影响。</p>
+<p>然而，随着硬件性能的提升和加密算法的优化，HTTPS的性能开销已经逐渐降低。现代的服务器和浏览器都对SSL/TLS协议进行了优化，例如使用会话复用技术减少握手过程的开销，采用硬件加速器提高加密解密的效率等。此外，HTTPS带来的安全性提升远大于其性能开销，因此在需要保障数据安全的场景中，使用HTTPS是值得的。</p>
+<p>应用场景</p>
+<p>HTTP协议适用于一些对数据安全性要求不高的场景，例如一些简单的信息发布网站、新闻网站等。在这些场景中，用户访问网站主要是为了获取信息，不涉及敏感数据的传输，因此使用HTTP协议可以满足基本的传输需求，同时避免了HTTPS带来的性能开销。</p>
+<p>而HTTPS协议则适用于对数据安全性要求较高的场景，例如电子商务网站、在线支付平台、银行网站、企业内部系统等。在这些场景中，用户需要传输大量的敏感数据，如个人身份信息、账户密码、交易信息等，使用HTTPS协议可以有效保障这些数据的安全传输，防止数据泄露和被篡改，从而提高用户的信任度和系统的可靠性。</p>
+<p>对搜索引擎优化（SEO）的影响</p>
+<p>从搜索引擎优化的角度来看，HTTPS对网站的排名有一定的积极影响。谷歌等主流搜索引擎都鼓励网站使用HTTPS协议，并将其作为排名因素之一。使用HTTPS协议的网站在搜索引擎的索引和排名中会获得一定的优势，因为搜索引擎认为这些网站更加安全可靠，更值得推荐给用户。</p>
+<p>此外，HTTPS还可以提高网站的用户体验。当用户访问一个使用HTTPS协议的网站时，浏览器会显示一个安全的锁形图标，这可以让用户感受到网站的安全性，增强用户对网站的信任感，从而提高用户的停留时间和转化率，对网站的SEO也有一定的促进作用。</p>
+<p>迁移至HTTPS的注意事项</p>
+<p>对于网站来说，从HTTP迁移到HTTPS是一个重要的安全升级过程，但在迁移过程中需要注意以下几点：</p>
+<p>证书选择</p>
+<p>选择合适的数字证书是迁移至HTTPS的关键步骤之一。常见的数字证书类型有DV（域名验证）证书、OV（组织验证）证书和EV（扩展验证）证书。DV证书验证过程简单，适用于个人网站或小型企业网站；OV证书需要验证网站所有者的组织信息，适用于中型企业网站；EV证书验证过程最为严格，适用于大型企业网站和金融机构网站。网站应根据自身的需求和安全要求选择合适的证书类型，并从可信赖的证书颁发机构（CA）申请证书。</p>
+<p>服务器配置</p>
+<p>在服务器上配置SSL/TLS协议是实现HTTPS的关键步骤。服务器管理员需要正确安装和配置SSL/TLS证书，包括指定证书文件、私钥文件、证书链文件等，并设置好SSL/TLS协议的版本和加密套件等参数。此外，还需要确保服务器的性能能够满足HTTPS带来的加密解密开销，合理配置服务器资源以保证网站的正常运行。</p>
+<p>混合内容问题</p>
+<p>在迁移至HTTPS后，网站中可能存在混合内容问题，即同时包含HTTP和HTTPS资源的页面。混合内容会导致页面的安全性降低，因为HTTP资源可能会被中间人攻击者篡改。因此，网站需要对所有资源进行审查和修改，确保所有资源都通过HTTPS协议加载，包括图片、视频、脚本、样式表等。可以通过修改资源的URL、使用相对URL或自动将HTTP请求重写为HTTPS请求等方式来解决混合内容问题。</p>
+<p>测试与验证</p>
+<p>在完成迁移后，需要对网站进行全面的测试和验证，以确保HTTPS的正确性和稳定性。可以使用各种在线工具和浏览器的开发者工具来检查SSL/TLS证书的有效性、加密套件的使用情况、混合内容问题等。同时，还需要对网站的功能进行测试，确保所有功能在HTTPS环境下都能正常工作，没有出现兼容性问题或错误。</p>
+<p>结论</p>
+<p>综上所述，HTTPS与HTTP在安全性、性能、应用场景等方面存在显著的区别。HTTPS通过SSL/TLS协议实现了数据的加密传输，有效提升了数据的安全性，适用于对数据安全性要求较高的场景。虽然HTTPS会带来一定的性能开销，但随着技术的发展和优化，其性能开销已经逐渐降低，且其带来的安全性提升远大于性能开销。因此，在需要保障数据安全的场景中，推荐使用HTTPS协议。对于网站来说，从HTTP迁移到HTTPS是一个重要的安全升级过程，需要选择合适的证书、正确配置服务器、解决混合内容问题，并进行全面的测试与验证，以确保网站的安全性和稳定性。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://wang1145141481.github.io/wangblog016">王小川的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","wang1145141481/wangblog016");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
