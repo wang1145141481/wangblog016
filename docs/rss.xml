@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 00:12:51 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>termux基本教程</title><link>https://wang1145141481.github.io/wangblog016/post/termux-ji-ben-jiao-cheng.html</link><description>Termux基本教程&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>王小川的博客</title><link>https://wang1145141481.github.io/wangblog016</link><description>文章列表</description><copyright>王小川的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://wang1145141481.github.io/wangblog016</link></image><lastBuildDate>Thu, 09 Jan 2025 10:23:41 +0000</lastBuildDate><managingEditor>王小川的博客</managingEditor><ttl>60</ttl><webMaster>王小川的博客</webMaster><item><title>termux进阶教程</title><link>https://wang1145141481.github.io/wangblog016/post/termux-jin-jie-jiao-cheng.html</link><description>Termux进阶教程&#13;
+&#13;
+&#13;
+引言&#13;
+&#13;
+随着移动互联网的迅猛发展，越来越多的开发者和技术爱好者希望能够在移动设备上进行编程、开发和系统管理等操作。</description><guid isPermaLink="true">https://wang1145141481.github.io/wangblog016/post/termux-jin-jie-jiao-cheng.html</guid><pubDate>Thu, 09 Jan 2025 10:22:58 +0000</pubDate></item><item><title>termux基本教程</title><link>https://wang1145141481.github.io/wangblog016/post/termux-ji-ben-jiao-cheng.html</link><description>Termux基本教程&#13;
 &#13;
 &#13;
 引言&#13;
